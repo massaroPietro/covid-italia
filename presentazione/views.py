@@ -5,3 +5,6 @@ from django.views.generic import TemplateView
 
 class PresentazioneTemplateView(TemplateView):
     template_name = 'presentazione/index.html'
+
+class PythonTemplateView(TemplateView):
+    template_name = 'presentazione/python.html'
