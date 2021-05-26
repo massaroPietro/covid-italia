@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Presentazione</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'presentazione/assets/favicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'presentazione/css/styles.css' %}" rel="stylesheet" />
+    <!-- CSS only -->
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'homepage_view' %}">Torna indietro  <i class="fas fa-undo-alt"></i></a>
+
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="{% static 'presentazione/assets/img/covid-19.png' %}" alt="..." />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Presentazione</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Ambiente - Sociale - Famiglia </p>
+        </div>
+    </header>
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Dettagli</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{% static 'presentazione/assets/img/portfolio/earth.png' %}" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{% static 'presentazione/assets/img/portfolio/social.png' %}" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{% static 'presentazione/assets/img/portfolio/family.png' %}" alt="..." />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body  pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center">Ambiente</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="{% static 'presentazione/assets/img/portfolio/earth.png' %}" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <div class="mb-3">
+                                    <p>
+                                        Negli ultimi mesi molte notizie di giornali e telegiornali hanno riportato diversi articoli, pubblicazioni e approfondimenti cercando di correlare la situazione che sta vivendo il Paese a causa del corona virus, con tutti i provvedimenti e le indicazioni
+                                        che hanno sostanzialmente modificato molte abitudini lavorative e famigliari di milioni di persone, con il miglioramento delle condizioni atmosferiche che si sta registrando nello stesso periodo.
+                                        <img class="img-fluid rounded my-3" src="{% static 'presentazione/assets/img/portfolio/inquinamento01.png' %}" /> Dal confronto dei due periodi temporali è facile intuire come <b>le
+                                            concentrazioni siano diminuite significativamente</b> ed in maniera abbastanza omogenea in tutte le province. Nella sequenza di giornate successiva è continuato il calo delle concentrazioni, anche se in maniera
+                                        meno netta, e comunque il valore medio di polveri sottili è rimasto sostanzialmente stabile e invariato.
+                                        <div class="row justify-content-around my-3">
+                                            <img class=" col-lg-9 rounded" src="{% static 'presentazione/assets/img/portfolio/inquinamento02.png' %}" />
+                                            <p class="col-3">
+                                                Andamento delle concentrazioni di Pm10 registrato nelle centraline ufficiali di monitoraggio della provincia di Milano
+                                            </p>
+                                        </div>
+                                        Possiamo affermare quindi che la quarantena nel mondo, e non solo in italia, ha fatto respirare la Terra cambiandone il volto, deturpato dalle attività umane. Sì, ci siamo fermati, abbiamo rallentato i ritmi, abbiamo smesso di usare l’auto, gli aerei
+                                        sono a terra così come gran parte della produzione industriale ma tutto ciò ha contribuito a ridurre l’inquinamento.
+                                        <div id="carouselExampleCaptions" class="carousel slide my-3" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            </div>
+                                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="{% static 'presentazione/assets/img/portfolio/san-paolo.png' %}" class="d-block w-100" alt="...">
+                                                        <div class="carousel-caption d-none d-md-block rounded  text-dark" style="background: rgba(255,255,255,0.7);">
+                                                            <h5>San Paolo, Brasile</h5>
+                                                            <p>Normalmente si riempie di traffico ma con il lockdown, ora assomiglia al viale di una piccola città.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="{% static 'presentazione/assets/img/portfolio/pechino.png ' %}" class="d-block w-100" alt="...">
+                                                        <div class="carousel-caption d-none d-md-block rounded  text-dark" style="background: rgba(255,255,255,0.7);">
+                                                            <h5>Pechino, Cina</h5>
+                                                            <p>Quì dove sono state imposte diverse le massime restrizioni per il coronavirus che si sono tradotte in un calo senza precedenti dell’inquinamento.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="{% static 'presentazione/assets/img/portfolio/bogota.png' %}" class="d-block w-100" alt="...">
+                                                        <div class="carousel-caption d-none d-md-block rounded  text-dark" style="background: rgba(255,255,255,0.7);">
+                                                            <h5>Bogotà, Colombia</h5>
+                                                            <p>Bogotà solitamente è immersa in una nube di smog prodotta dal grande traffico ma da quando la quarantena ha preso piede, la qualità dell’aria è nettamente migliorata.
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                              <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="text-center mt-lg-4">
+                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                            <i class="fas fa-times fa-fw "></i>
+                                            Chiudi
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center">Sociale</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="{% static 'presentazione/assets/img/portfolio/social.png' %}" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    <h5>Nel 2020 le famiglie italiane hanno dovuto fronteggiare un crollo dell’economia d’intensità mai sperimentata nei decenni successivi alla seconda guerra mondiale. Gli effetti non sono stati gli stessi per tutti.</h5>
+                                    Nei primi sei mesi del 2020 il PIL è caduto di circa il 12% rispetto all’anno prima, quasi il doppio di quanto avvenuto nel primo semestre del 2009 al culmine della crisi finanziaria globale. Tra dicembre e giugno, il numero degli occupati è calato di
+                                    559 mila unità e il numero di ore lavorate in media alla settimana è diminuito da 34,3 a 30,6, dopo essere sceso sotto le 23 ore durante il lockdown. Questa eccezionale contrazione dell’attività si è riflessa solo in
+                                    parte sui redditi familiari grazie ai massicci trasferimenti pubblici.
+                                    <h6 class="mt-3 mb-2">Gli effetti dell’epidemia sono stati pesanti e diffusi, ma non gli stessi per tutti</h6>
+                                    L’occupazione si è ridotta del 7,1% tra i giovani, del 2,5% tra i lavoratori di età compresa tra i 35 e i 49 anni, è leggermente aumentata tra quelli con 50 e più anni. Diversamente dal passato, il calo ha interessato più le donne degli uomini.
+                                    <img class="img-fluid rounded mt-2 mb-3" src="{% static 'presentazione/assets/img/portfolio/disoccupazione.png' %}" />
+                                    <h6 class="mb-2">Ripercussioni di più lungo periodo</h6>
+                                    È ragionevole supporre che alcune tendenze che si sono manifestate in questi ultimi mesi abbiano ripercussioni durature. L'esperienza passata porterà ad inevitabili conseguenze:
+                                    <div class="row mt-3 mb-lg-4">
+                                        <div class="col-4">
+                                            <div class="list-group" id="list-tab" role="tablist">
+                                                <a class="list-group-item list-group-item-action active" id="list-globalizzazione-list" data-bs-toggle="list" href="#list-globalizzazione" role="tab" aria-controls="list-globalizzazione">Globalizzazione</a>
+                                                <a class="list-group-item list-group-item-action" id="list-tecnologie-list" data-bs-toggle="list" href="#list-tecnologie" role="tab" aria-controls="list-tecnologie">Tecnologie</a>
+                                                <a class="list-group-item list-group-item-action" id="list-istruzione-list" data-bs-toggle="list" href="#list-istruzione" role="tab" aria-controls="list-istruzione">Istruzione</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="list-globalizzazione" role="tabpanel" aria-labelledby="list-globalizzazione-list">L’esperienza recente può frenare il processo di globalizzazione, sommandosi a spinte protezionistiche già in atto. È possibile che le filiere produttive globali si accorcino e che diminuisca la dipendenza
+                                                    dall’estero per l’approvvigionamento di beni essenziali, come si è visto per i medicinali.</div>
+                                                <div class="tab-pane fade" id="list-tecnologie" role="tabpanel" aria-labelledby="list-tecnologie-list">È prevedibile che acceleri il ricorso alle tecnologie digitali, che si è rivelato essenziale per attenuare gli effetti negativi della pandemia. La rapida diffusione del lavoro a distanza e degli acquisti
+                                                    online può influenzare permanentemente i comportamenti delle imprese e delle persone modificando l’organizzazione del lavoro.</div>
+                                                <div class="tab-pane fade" id="list-istruzione" role="tabpanel" aria-labelledby="list-istruzione-list">Si stima che in Italia, in assenza di interventi, ci sarà una perdita di apprendimento equivalente a 0,6 anni di scuola. Nel mondo non andare a scuola significa essere esposti a un rischio maggiore di lavoro
+                                                    minorile, matrimoni precoci e altre forme di abuso.</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-2">Conclusione</h6>
+                                    In larga misura gli effetti dell’epidemia hanno riprodotto disuguaglianze preesistenti, colpendo chi ha occupazioni precarie e temporanee, maggiormente i giovani e presumibilmente gli stranieri9, ma hanno coinvolto anche attività autonome più tradizionali,
+                                    in modo grave e diverso dal passato; hanno generato nuove forme di disuguaglianza. La valutazione delle ripercussioni distributive e sociali richiederà, quando avremo più dati, un’analisi a grana fine, attenta alle
+                                    molteplici dimensioni del benessere. Quanto gli effetti sulle condizioni di vita delle persone nel 2020 si tradurranno in conseguenze più durature dipenderà dalla capacità di ripresa del Paese.
+
+                                </p>
+                                <div class="text-center">
+                                    <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                            <i class="fas fa-times fa-fw"></i>
+                                            Chiudi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0 text-center">Famiglia</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="{% static 'presentazione/assets/img/portfolio/family.png' %}" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    <h5 class="my-3">La famiglia a carico della donna prima e dopo la pandemia</h5>
+                                    Sono le donne, ancora una volta, ad aver subito e continuare a subire maggiormente le conseguenze della pandemia, a livello di carico famigliare e mentale. Il 60% delle donne italiane ha dovuto gestire da sola famiglia, figli e persone anziane, spesso insieme al lavoro: un carico pesante, che ha portato 1 donna su 2 in Italia a dover abbandonare piani e progetti a causa del Covid.
+                                    <img class="img-fluid rounded mt-2 mb-3" src="{% static 'presentazione/assets/img/portfolio/donne.png' %}" />
+                                    <h6>Delitti e femminicidi</h6>
+                                    Nel 2020 si registra una riduzione dei reati rispetto al 2019: si sono ridotti sensibilmente i reati contro il patrimonio e la persona, come furti, rapine e ricettazione. Mentre i delitti informatici registrano un trend in aumento. Diminuiscono gli omicidi ma non i femminicidi, che fanno registrare, anzi, un aumento: resta invariato il dato delle donne uccise da partner o ex partner. Sono stati infatti 275 gli omicidi commessi, di cui 113 a danno delle donne (nel 2019 erano 111) e 144 in ambito familiare o affettivo. Tra questi ultimi 99 vittime erano di sesso femminile, 67 sono commessi da partner o ex partner.
+
+
+                                </p>
+                                <div class="text-center">
+
+                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Chiudi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4-->
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'presentazione/js/scripts.js' %}"></script>
+</body>
+
+</html>

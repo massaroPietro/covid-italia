@@ -1,0 +1,101 @@
+{% extends 'base.html' %} {% load static %} {% block title %}{{ block.super }} Notizie{% endblock title %} {% block content%}
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+            <!-- Topbar Search -->
+            {% include 'nav_cerca.html' %}
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                <li class="nav-item dropdown no-arrow d-sm-none ml-auto">
+                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+                    <!-- Dropdown - Messages -->
+                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                        <form class="form-inline mr-auto w-100 navbar-search">
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <div class="row">
+
+
+                {% for articolo in articoli.articles %}
+                <!-- Page Heading -->
+                <div class="col-12">
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Accordion -->
+                        <a href="#collapseCardExample{{ forloop.counter }}" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample{{ forloop.counter }}">
+                            <h6 class="m-0 font-weight-bold text-primary">{{ articolo.title }}</h6>
+                        </a>
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse " id="collapseCardExample{{ forloop.counter }}">
+                            <div class="row">
+                                <div class="{% if request.user_agent.is_mobile %}col-12{% else %}col-6{% endif %}">
+                                    <div class="card-body">
+                                        <p class="card-text">{{ articolo.description }}</p>
+                                        <p class="card-text">{{ articolo.content|truncatechars:200 }}</p>
+                                        <p class="card-text"><small class="text-muted">{{ articolo.publishedAt }}</small></p>
+                                        <a href="{{ articolo.url }}" class="btn btn-primary">
+                                Continua a leggere
+                            </a>
+                                    </div>
+                                </div>
+                                {% if not request.user_agent.is_mobile %}
+                                <div class="col-6">
+                                    <img src="{{ articolo.urlToImage }}" class="img-fluid">
+                                </div>
+                                {% endif %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; <a href="https://www.instagram.com/massaro.pietro/"> Massaro Pietro</a> {% now 'Y' %}</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+</div>
+{% endblock content %}
