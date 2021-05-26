@@ -117,12 +117,21 @@
                                         <img class="img-fluid rounded my-3" src="{% static 'presentazione/assets/img/portfolio/inquinamento01.png' %}" /> Dal confronto dei due periodi temporali è facile intuire come <b>le
                                             concentrazioni siano diminuite significativamente</b> ed in maniera abbastanza omogenea in tutte le province. Nella sequenza di giornate successiva è continuato il calo delle concentrazioni, anche se in maniera
                                         meno netta, e comunque il valore medio di polveri sottili è rimasto sostanzialmente stabile e invariato.
+                                    {% if not request.user_agent.is_mobile %}
                                         <div class="row justify-content-around my-3">
                                             <img class=" col-lg-9 rounded" src="{% static 'presentazione/assets/img/portfolio/inquinamento02.png' %}" />
                                             <p class="col-3">
-                                                Andamento delle concentrazioni di Pm10 registrato nelle centraline ufficiali di monitoraggio della provincia di Milano
+                                                <b>Andamento delle concentrazioni di Pm10 registrato nelle centraline ufficiali di monitoraggio della provincia di Milano</b>
                                             </p>
                                         </div>
+                                        {% else %}
+                                        <div class="row justify-content-center mb-lg-4">
+
+
+                                            <img class="img-fluid rounded my-3" src="{% static 'presentazione/assets/img/portfolio/inquinamento02.png' %}" />
+                                            <b>Andamento delle concentrazioni di Pm10 registrato nelle centraline ufficiali di monitoraggio della provincia di Milano.</b>
+                                        </div>
+                                    {% endif %}
                                         Possiamo affermare quindi che la quarantena nel mondo, e non solo in italia, ha fatto respirare la Terra cambiandone il volto, deturpato dalle attività umane. Sì, ci siamo fermati, abbiamo rallentato i ritmi, abbiamo smesso di usare l’auto, gli aerei
                                         sono a terra così come gran parte della produzione industriale ma tutto ciò ha contribuito a ridurre l’inquinamento.
                                         <div id="carouselExampleCaptions" class="carousel slide my-3" data-bs-ride="carousel">
@@ -221,14 +230,14 @@
                                     <h6 class="mb-2">Ripercussioni di più lungo periodo</h6>
                                     È ragionevole supporre che alcune tendenze che si sono manifestate in questi ultimi mesi abbiano ripercussioni durature. L'esperienza passata porterà ad inevitabili conseguenze:
                                     <div class="row mt-3 mb-lg-4">
-                                        <div class="col-4">
-                                            <div class="list-group" id="list-tab" role="tablist">
+                                        <div class="{% if request.user_agent.is_mobile %}col-lg-12{% else %}col-lg-4{% endif %}">
+                                            <div class="list-group list {% if request.user_agent.is_mobile %}list-group-horizontal{% endif %}" id="list-tab" role="tablist">
                                                 <a class="list-group-item list-group-item-action active" id="list-globalizzazione-list" data-bs-toggle="list" href="#list-globalizzazione" role="tab" aria-controls="list-globalizzazione">Globalizzazione</a>
                                                 <a class="list-group-item list-group-item-action" id="list-tecnologie-list" data-bs-toggle="list" href="#list-tecnologie" role="tab" aria-controls="list-tecnologie">Tecnologie</a>
                                                 <a class="list-group-item list-group-item-action" id="list-istruzione-list" data-bs-toggle="list" href="#list-istruzione" role="tab" aria-controls="list-istruzione">Istruzione</a>
                                             </div>
                                         </div>
-                                        <div class="col-8">
+                                        <div class="{% if request.user_agent.is_mobile %}col-lg-12{% else %}col-lg-8{% endif %}">
                                             <div class="tab-content" id="nav-tabContent">
                                                 <div class="tab-pane fade show active" id="list-globalizzazione" role="tabpanel" aria-labelledby="list-globalizzazione-list">L’esperienza recente può frenare il processo di globalizzazione, sommandosi a spinte protezionistiche già in atto. È possibile che le filiere produttive globali si accorcino e che diminuisca la dipendenza
                                                     dall’estero per l’approvvigionamento di beni essenziali, come si è visto per i medicinali.</div>
