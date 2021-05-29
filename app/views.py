@@ -11,6 +11,8 @@ def coloreRegione(nomeRegione):
         nomeRegione = 'Trentino-Alto Adige/Südtirol'
     if nomeRegione == 'P.A. Trento':
         nomeRegione = 'Trentino-Alto Adige/Südtirol'
+    if nomeRegione == 'Abruzzo':
+        nomeRegione = 'Abbruzzo'
     zoneRegioni = ColoreRegioni().colori_emoji
     tmp = [regione.nome, zoneRegioni[nomeRegione][0]]
     return tmp
