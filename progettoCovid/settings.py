@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'jj8_ghl07&cku2!y=_u!bgrzv!a&*@)78f65y%x&-z0jhvtq#8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['Pimas.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['pimas-covid.herokuapp.com', 'localhost', '127.0.0.1']
 
 
-# Application definition
+# Application definitionheroku logs --tail
 
 INSTALLED_APPS = [
     'django.contrib.admin',
