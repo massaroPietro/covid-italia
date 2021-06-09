@@ -139,11 +139,4 @@ def notizie_list_view(request):
     context = {'articoli': response}
     regioni = Regione.objects.all()
     context['regioni'] = regioni
-    return render(request, 'app/notizie_list.html', context)
-
-
-
-    # codice...
-
-
-
+    return render(request, 'app/notizie_list.html', context) 
