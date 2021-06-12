@@ -1,1 +1,1 @@
-web: gunicorn progettoCovid.wsgi
+web: gunicorn CCMS.wsgi --log-file -
