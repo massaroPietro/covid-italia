@@ -28,7 +28,7 @@ SECRET_KEY = 'jj8_ghl07&cku2!y=_u!bgrzv!a&*@)78f65y%x&-z0jhvtq#8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['pimas-covid.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definitionheroku logs --tail
